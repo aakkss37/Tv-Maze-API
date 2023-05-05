@@ -1,4 +1,17 @@
+.card{
+	background-color: #926000;
+	padding: 2px;
+	border-radius: 2px;
+	color: whitesmoke;
+}
+
 .img__container img{
 	width: 100%;
 	height: auto;
 } 
+
+.show__rating{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

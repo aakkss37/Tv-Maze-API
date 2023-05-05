@@ -2,6 +2,8 @@ import React from 'react'
 
 import './card.css'
 import unavailableImg from '../../assets/unavailableImg.png'
+import { AiFillStar } from "react-icons/ai";
+
 
 const Card = (props) => {
 	console.log(props.img)
@@ -12,7 +14,10 @@ const Card = (props) => {
 			</div>
 			<div className='showname__rating'>
 				<p>{props.showName}</p>
-				<p>{props.rating ? props.rating : "--"}</p>
+				<p className='show__rating'>
+					<span>Rating: &nbsp;</span>
+					<span> {props.rating ? props.rating : "--"}<AiFillStar style={{ fontSize: 16, position: "relative", top: 3 }} /></span>
+				</p>
 			</div>
 
 		</div>
