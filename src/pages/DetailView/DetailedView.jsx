@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
 import './detailedView.css'
+import unavailableImg from '../../assets/unavailableImg.png'
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
 import Loader from '../../components/Loader/Loader';
@@ -29,7 +30,7 @@ const DetailedView = () => {
 				!showDetail ? <Loader /> :
 					<div className='show__detail__container'>
 						<div className="img__container">
-							<img src={showDetail?.image.original} alt="error loaging" />
+							<img src={showDetail.image ? showDetail.image.original : unavailableImg} alt="error loaging" />
 							<a href={showDetail?.network?.officialSite}> Visite Official Site</a>
 						</div>
 						<div className="detail__text">
