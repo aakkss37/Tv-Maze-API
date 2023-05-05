@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
@@ -14,8 +13,7 @@ import DetailedView from './pages/DetailView/DetailedView';
 
 
 function App () {
-	const [active, setActive] = useState();
-	
+
 	return (
 		<div className="App">
 			<BrowserRouter>

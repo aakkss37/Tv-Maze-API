@@ -23,9 +23,8 @@
 .navbar .navbar__container .container__lhs p {
 	text-decoration: none;
 	font-family: 'Pacifico', cursive;
-	color: black;
 	font-weight: 800;
-	transition: 0.2s;
+	cursor: pointer;
 }
 
 .navbar .navbar__container .container__rhs {
@@ -35,15 +34,21 @@
 
 .navbar .navbar__container .container__rhs p {
 	text-decoration: none;
-	color: black;
 	margin-left: 20px;
-	transition: 0.2s;
 	font-size: 14px;
 	cursor: pointer;
+
 }
 
+.active {
+	color: #926000;
+	border-bottom: 3px solid #926000;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
 
 .navbar .navbar__container .container__rhs p:hover {
+	transition: 0.2s;
 	color: #926000;
 }
 
@@ -73,7 +78,7 @@
 		margin-left: 10px;
 	}
 
-	.contact{
+	.contact {
 		font-size: 10px;
 		margin-left: 10px;
 	}
