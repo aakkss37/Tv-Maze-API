@@ -1,18 +1,22 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios';
 
-import SearchBar from '../../components/Searchbar/SearchBar'
+
+// Components
 import './home.css'
+import unavailableImg from '../../assets/unavailableImg.png'
+import SearchBar from '../../components/Searchbar/SearchBar'
 import Loader from '../../components/Loader/Loader';
+import Card from '../../components/Cards/Card';
 
 
 const Home = () => {
-	const [movie, setMovie] = useState("")
+	const [movies, setMovies] = useState("")
 
 	useEffect(() => {
 		const callAPI = async () => {
 			const { data } = await axios.get("https://api.tvmaze.com/search/shows?q=all");
-			setMovie(data)
+			setMovies(data)
 		}
 		callAPI()
 	}, [])
@@ -28,9 +32,13 @@ const Home = () => {
 
 				<div className='home__body'>
 					{
-						movie ? <>
+						movies ? <>
 							{
-								movie.map((item)=> <h3 key={item.show.id}>{item.show.name}</h3>)
+								movies.map((item)=> <Card key={item.show.id}
+														img={item.show.image?.medium }
+														showName ={item.show?.name }
+														rating={item.show.rating?.average }
+													/>)
 							}
 						</> : <Loader />
 					}
