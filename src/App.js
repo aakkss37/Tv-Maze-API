@@ -11,7 +11,6 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import DetailedView from './pages/DetailView/DetailedView';
 
-
 function App () {
 
 	return (
@@ -27,6 +26,7 @@ function App () {
 						<Route path='/detail/:id' element={<DetailedView />} />
 					</Routes>
 				</div>
+
 			</BrowserRouter>
 		</div>
 	);
