@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
@@ -13,23 +14,22 @@ import DetailedView from './pages/DetailView/DetailedView';
 
 
 function App () {
+	const [active, setActive] = useState();
+	
 	return (
 		<div className="App">
-			
-			<Navbar/>
+			<BrowserRouter>
 
-			<div className='app__container'>
-				<BrowserRouter>
+				<Navbar />
+
+				<div className='app__container'>
 					<Routes>
-						<Route path='/home' element={<Home/>} />
-						<Route path='/about' element={<About/>} />
-						<Route path='/detail/:id' element={<DetailedView/>}/>
+						<Route path='/home' element={<Home />} />
+						<Route path='/about' element={<About />} />
+						<Route path='/detail/:id' element={<DetailedView />} />
 					</Routes>
-				</BrowserRouter>
-				{/* Home page */}
-				{/* About */}
-				{/* Detailed View */}
-			</div>
+				</div>
+			</BrowserRouter>
 		</div>
 	);
 }
