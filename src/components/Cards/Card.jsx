@@ -6,7 +6,6 @@ import { AiFillStar } from "react-icons/ai";
 
 
 const Card = (props) => {
-	console.log(props.img)
 	return (
 		<div className=' card'>
 			<div className='img__container'>

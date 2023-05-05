@@ -9,22 +9,29 @@ import { DataContext } from '../../context/dataProvider';
 const SearchBar = () => {
 	const context = useContext(DataContext);
 
-	useEffect(() => {
+	const searchShowHandler = (value) => {
+		context.setSearchInput(value)
+	}
+
+	useEffect(() => { 
 		const callAPI = async () => {
-			const { data } = await API.getSearchShow(context.searchInput)
-			console.log(data)
-			context.setData(data)
+			try {
+				const { data } = await API.getSearchShow(context.searchInput)
+				context.setData(data)
+			} catch (error) {
+				console.log(error)
+			}
 		}
 		callAPI()
-	}, [])
-
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [context.searchInput])
 	return (
 		<div className='searchbar__container'>
 			<div className='searchbar__text'>
 				<h1>Find most populer movies and TV shows here. </h1>
 			</div>
 			<div className='search'>
-				<input type="text" placeholder='Search Shows Name Hear' />
+				<input type="text" placeholder='Search Shows Name Hear' onChange={(e)=> searchShowHandler(e.target.value)}/>
 				<BiSearchAlt2 style={{ fontSize: '22px', position: "relative", right: 30, top: 22, color: '#926000'}}/>
 			</div>
 		</div>
