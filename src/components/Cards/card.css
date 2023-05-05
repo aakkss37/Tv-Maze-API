@@ -1,16 +1,25 @@
-.card{
+.card {
 	background-color: #926000;
 	padding: 2px;
 	border-radius: 2px;
 	color: whitesmoke;
+	-webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+	transition: transform 0.2s ease-out;
 }
 
-.img__container img{
+.card:hover {
+	cursor: pointer;
+	transform: translateY(-10px);
+}
+
+.img__container img {
 	width: 100%;
 	height: auto;
-} 
+}
 
-.show__rating{
+.show__rating {
 	display: flex;
 	align-items: center;
 	justify-content: center;
