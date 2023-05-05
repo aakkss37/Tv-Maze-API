@@ -1,4 +1,6 @@
 export const getType = (value, body) => {
+	console.log("value--> ", value)
+	console.log("body--> ", body)
 	if (value.query) {
 		// console.log("query ==> ", value.query)
 		if (typeof body === "object") {

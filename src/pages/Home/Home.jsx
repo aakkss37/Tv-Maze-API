@@ -26,6 +26,7 @@ const Home = () => {
 						context.data ? <>
 							{
 								context.data.map((item)=> <Card key={item.show.id}
+														showId={item.show.id}
 														img={item.show.image?.medium }
 														showName ={item.show?.name }
 														rating={item.show.rating?.average }

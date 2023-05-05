@@ -41,9 +41,5 @@ export const SERVICE_URL = {
 		method: "GET",
 		query: true,
 	},
-	getShowDetail: {
-		url: "/search/shows",
-		method: "GET",
-		params: true
-	},
+	
 }
