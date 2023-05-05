@@ -36,7 +36,7 @@ apiService: {
 }
 */
 export const SERVICE_URL = {
-	getShow: {
+	getSearchShow: {
 		url: "/search/shows",
 		method: "GET",
 		query: true,

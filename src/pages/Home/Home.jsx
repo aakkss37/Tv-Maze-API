@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import axios from 'axios';
+
 
 
 // Components
@@ -7,6 +7,7 @@ import './home.css'
 import SearchBar from '../../components/Searchbar/SearchBar'
 import Loader from '../../components/Loader/Loader';
 import Card from '../../components/Cards/Card';
+import { API } from '../../Interceptor/api';
 
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
 
 	useEffect(() => {
 		const callAPI = async () => {
-			const { data } = await axios.get("https://api.tvmaze.com/search/shows?q=all");
+			const { data } = await API.getSearchShow("all")
 			setMovies(data)
 		}
 		callAPI()
