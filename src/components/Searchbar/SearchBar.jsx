@@ -1,7 +1,23 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
+
+import { API } from '../../Interceptor/api';
 import './searchBar.css'
 import { BiSearchAlt2 } from "react-icons/bi";
+import { DataContext } from '../../context/dataProvider';
+
+
 const SearchBar = () => {
+	const context = useContext(DataContext);
+
+	useEffect(() => {
+		const callAPI = async () => {
+			const { data } = await API.getSearchShow(context.searchInput)
+			console.log(data)
+			context.setData(data)
+		}
+		callAPI()
+	}, [])
+
 	return (
 		<div className='searchbar__container'>
 			<div className='searchbar__text'>

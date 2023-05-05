@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react'
-
+import { useContext } from 'react'
 
 
 // Components
@@ -7,19 +6,11 @@ import './home.css'
 import SearchBar from '../../components/Searchbar/SearchBar'
 import Loader from '../../components/Loader/Loader';
 import Card from '../../components/Cards/Card';
-import { API } from '../../Interceptor/api';
+import { DataContext } from '../../context/dataProvider';
 
 
 const Home = () => {
-	const [movies, setMovies] = useState("")
-
-	useEffect(() => {
-		const callAPI = async () => {
-			const { data } = await API.getSearchShow("all")
-			setMovies(data)
-		}
-		callAPI()
-	}, [])
+	const context = useContext(DataContext)
 
 
 
@@ -32,9 +23,9 @@ const Home = () => {
 
 				<div className='home__body'>
 					{
-						movies ? <>
+						context.data ? <>
 							{
-								movies.map((item)=> <Card key={item.show.id}
+								context.data.map((item)=> <Card key={item.show.id}
 														img={item.show.image?.medium }
 														showName ={item.show?.name }
 														rating={item.show.rating?.average }
