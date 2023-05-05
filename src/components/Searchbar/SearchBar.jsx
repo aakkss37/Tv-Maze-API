@@ -13,11 +13,14 @@ const SearchBar = () => {
 		context.setSearchInput(value)
 	}
 
-	useEffect(() => { 
+	useEffect(() => {
 		const callAPI = async () => {
 			try {
 				const { data } = await API.getSearchShow(context.searchInput)
-				context.setData(data)
+				setTimeout(function () {
+					console.log("One second has passed.");
+					context.setData(data)
+				}, 1000); //
 			} catch (error) {
 				console.log(error)
 			}
