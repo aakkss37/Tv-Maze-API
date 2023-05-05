@@ -4,7 +4,6 @@ import axios from 'axios';
 
 // Components
 import './home.css'
-import unavailableImg from '../../assets/unavailableImg.png'
 import SearchBar from '../../components/Searchbar/SearchBar'
 import Loader from '../../components/Loader/Loader';
 import Card from '../../components/Cards/Card';

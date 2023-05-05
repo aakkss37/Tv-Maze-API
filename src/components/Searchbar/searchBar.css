@@ -1,4 +1,4 @@
-.search{
+.search {
 	margin-top: 2rem;
 	display: flex;
 	flex-direction: row;
@@ -6,11 +6,11 @@
 	justify-content: center;
 }
 
-.searchbar__text h1{
+.searchbar__text h1 {
 	font-family: 'Pacifico', cursive;
 }
 
-.search input{
+.search input {
 	margin-top: 1rem;
 	width: 480px;
 	height: 35px;
@@ -20,7 +20,20 @@
 	outline: none;
 	border-bottom: 2px solid #926000;
 }
-.search input:focus{
+
+.search input:focus {
 	border: 2px solid #926000;
 	border-radius: 10px;
+}
+
+
+
+@media only screen and (max-width: 540px) {
+	.searchbar__text h1 {
+		font-size: 20px;
+	}
+
+	.search {
+		margin-top: 0rem;
+	}
 }

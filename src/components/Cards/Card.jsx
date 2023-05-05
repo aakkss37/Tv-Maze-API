@@ -1,4 +1,6 @@
 import React from 'react'
+
+import './card.css'
 import unavailableImg from '../../assets/unavailableImg.png'
 
 const Card = (props) => {
