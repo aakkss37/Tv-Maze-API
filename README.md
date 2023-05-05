@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Tools and Technology
+> - React.js
+> - Axios (interceptor)
+> - html/css JavaScript
+
+
+
 ## Available Scripts
 
 To run  the project -> `cd` to the project directory, you can run:
