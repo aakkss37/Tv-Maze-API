@@ -9,7 +9,7 @@ const SearchBar = () => {
 			</div>
 			<div className='search'>
 				<input type="text" placeholder='Search Shows Name Hear' />
-				<BiSearchAlt2 style={{ fontSize: 22, position: "relative", right: 30, top: 22, color: '#926000'}}/>
+				<BiSearchAlt2 style={{ fontSize: '22px', position: "relative", right: 30, top: 22, color: '#926000'}}/>
 			</div>
 		</div>
 	)

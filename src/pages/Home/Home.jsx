@@ -12,10 +12,11 @@ const Home = () => {
 	useEffect(() => {
 		const callAPI = async () => {
 			const { data } = await axios.get("https://api.tvmaze.com/search/shows?q=all");
-			console.log(data)
+			setMovie(data)
 		}
 		callAPI()
 	}, [])
+
 
 
 	return (
@@ -26,7 +27,14 @@ const Home = () => {
 				</div>
 
 				<div className='home__body'>
-					<Loader/>
+					{
+						movie ? <>
+							{
+								movie.map((item)=> <h3 key={item.show.id}>{item.show.name}</h3>)
+							}
+						</> : <Loader />
+					}
+					
 				</div>
 			</div>
 		</div>
