@@ -22,7 +22,7 @@ function App () {
 
 				<div className='app__container'>
 					<Routes>
-						<Route path='/home' element={<Home />} />
+						<Route path='/' element={<Home />} />
 						<Route path='/about' element={<About />} />
 						<Route path='/detail/:id' element={<DetailedView />} />
 					</Routes>

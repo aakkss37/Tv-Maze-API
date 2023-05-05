@@ -4,8 +4,8 @@ import './searchBar.css'
 const SearchBar = () => {
   return (
 	<div className='searchbar'>
-		<h3>Find most populer movies and TV shows here. </h3>
-		
+		<h2>Find most populer movies and TV shows here. </h2>
+
 	</div>
   )
 }

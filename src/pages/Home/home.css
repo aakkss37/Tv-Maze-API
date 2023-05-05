@@ -1,0 +1,11 @@
+.home{
+	position: relative;
+	top: 4rem;
+}
+
+.home .home_container{
+	max-width: 80%;
+	margin: auto;
+	padding-top: 3rem;
+	text-align: center;
+}
